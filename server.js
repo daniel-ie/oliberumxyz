@@ -12,7 +12,7 @@ app.set('views', path.join(__dirname, 'views')) ;
 app.set('view engine', 'ejs') ;
 app.get('/', (req, res) => res.render('pages/index'))  ; // index.html
 
-function initializer(){
+/*function initializer(){
   $('button').click(function(){
     $.ajax({
         url: 'https://iot-xyz.herokuapp.com/iot',
@@ -23,7 +23,7 @@ function initializer(){
     });
   }) ;	
         
-}
+}*/
 
 /*function initializer(){
   $.ajax({
