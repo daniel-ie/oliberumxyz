@@ -1,0 +1,14 @@
+{
+  "name": "node-js-getting-started",
+  "version": "1.0.0",
+  "description": "A simple website in node js",
+  "main": "index.js",
+  "author": "Ben Gourley",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.15.2",
+    "jade": "^1.11.0",
+    "nodemon": "^1.9.1",
+    "stylus": "^0.54.5"
+  }
+}
