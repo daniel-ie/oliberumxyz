@@ -3,9 +3,6 @@
   "version": "1.0.0",
   "description": "A simple website in node js",
   "main": "server.js",
-  "scripts": {
-    "start": "node server.js",
-  },
   "author": "Daniel Chaves",
   "license": "ISC",
   "dependencies": {
