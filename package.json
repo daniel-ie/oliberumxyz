@@ -10,11 +10,12 @@
     "start": "node server.js"
   },
   "author": "Daniel Chaves",
-  "license": "ISC",
+  "license": "MIT",
   "dependencies": {
+    "body-parser": "^1.18.3",
+    "cookie-parser": "^1.4.3",
+    "ejs": "^2.6.1",
     "express": "^4.15.2",
-    "cookie-parser":"^1.4.3",
-    "body-parser":"^1.18.3",
     "jade": "^1.11.0",
     "nodemon": "^1.9.1",
     "stylus": "^0.54.5"
@@ -31,6 +32,5 @@
     "node",
     "heroku",
     "express"
-  ],
-  "license": "MIT"
+  ]
 }
