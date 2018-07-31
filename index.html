@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+ 
+	<head>
+	
+		<title> Display data </title>
+
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+		<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+		<script type="text/javascript" src="https://www.google.com/jsapi"></script>
+		<script type="text/javascript" src="server.js"></script>
+		<link rel="stylesheet" href="main.css" type="text/css">
+
+		<script>
+				$(function() {
+				  initializer();
+				}); 
+		</script>
+		
+	</head>
+		
+	<body>
+			<button>Get Score</button>
+
+			<div></div>
+
+		<div>
+			<h1 class="banner">O L I B E R U M</h1>
+			
+			<p> </p>
+			<p> </p>
+			<p> </p>
+			
+			<p> Sensor superior: </p> <p id = "fuerza"></p>
+			<p> Sensor superior: </p> <p id = "ps"></p>
+			<p> Sensor inferior: </p> <p id = "pi"></p>
+			
+			<button onclick = "notifyMe()"> Notify me please! </button>
+		</div>
+		
+		<table class="columns" align="center">
+			<tr>
+				<td><div id = "chart_div"></div></td>
+				<td><div id = "chart_div2"></div></td>
+				<td><div id = "chart_div3"></div></td>
+			</tr>
+		</table>
+		
+	</body>
+ 
+</html>
+
+<!--		<script>
+			$(function() {
+			  initializer();
+			}); 
+		</script>-->
+
+		<!-- 
+			$.ajax({
+				type: "GET", //rest Type
+				dataType: 'jsonp', //mispelled
+				url: "https://iot-xyz.herokuapp.com/iot",
+				async: false,
+				contentType: "application/json; charset=utf-8",
+				success: function (msg) {
+					console.log(msg);                
+				}
+			});-->
