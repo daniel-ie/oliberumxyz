@@ -14,7 +14,7 @@ app.set('views', path.join(__dirname, 'views')) ;
 app.set('view engine', 'ejs') ;
 app.get('/', (req, res) => res.render('pages/index'))  ; // index.html
  
-app.get('/index', (req, res) => res.render('index.html'))  ; // index.html
+app.get('/index2', (req, res) => res.render('pages/index2'))  ; // index.html
  
 
 function initializer(){
