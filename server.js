@@ -11,8 +11,8 @@ const PORT = process.env.PORT || 5000  ;
 //app.use(cookieParser())
 app.use(express.static(path.join(__dirname, 'public'))) ; 
 app.set('views', path.join(__dirname, 'views')) ;
-app.set('view engine', 'ejs') ;
-app.get('/', (req, res) => res.render('pages/index'))  ; // index.html
+//app.set('view engine', 'ejs') ;
+//app.get('/', (req, res) => res.render('pages/index'))  ; // index.html
  
 app.get('/index2', (req, res) => res.render('pages/index2'))  ; // index.html
  
