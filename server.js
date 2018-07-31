@@ -1,15 +1,16 @@
 // Modulos
-//const bodyParser = require('body-parser');
-const express = require('express');
-//const cookieParser = require('cookie-parser');
-let app = express() ;
+var bodyParser = require('body-parser');
+var express = require('express');
+var cookieParser = require('cookie-parser');
+var app = express() ;
 
 const path = require('path') ;
 const PORT = process.env.PORT || 5000  ;
-	
+
+app.use(cookieParser())
 app.use(express.static(path.join(__dirname, ''))) ; 
-//app.set('views', path.join(__dirname, 'views')) ;
-//app.set('view engine', 'ejs') ;
+app.set('views', path.join(__dirname, 'views')) ;
+app.set('view engine', 'ejs') ;
 app.get('/', (req, res) => res.render('pages/index'))  ; // index.html
 
 function initializer(){
@@ -40,4 +41,3 @@ function initializer(){
 */
 
 app.listen(PORT, () => console.log(`Listening on ${ PORT }`))
-
