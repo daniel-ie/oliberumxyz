@@ -1,18 +1,18 @@
 // Modulos
-const bodyParser = require('body-parser');
+//const bodyParser = require('body-parser');
 const express = require('express');
-const cookieParser = require('cookie-parser');
-var app = express() ;
+//const cookieParser = require('cookie-parser');
+let app = express() ;
 
 const path = require('path') ;
 const PORT = process.env.PORT || 5000  ;
 	
-app.use(express.static(path.join(__dirname, 'public'))) ; 
-app.set('views', path.join(__dirname, 'views')) ;
-app.set('view engine', 'ejs') ;
+app.use(express.static(path.join(__dirname, ''))) ; 
+//app.set('views', path.join(__dirname, 'views')) ;
+//app.set('view engine', 'ejs') ;
 app.get('/', (req, res) => res.render('pages/index'))  ; // index.html
 
-/*function initializer(){
+function initializer(){
   $('button').click(function(){
     $.ajax({
         url: 'https://iot-xyz.herokuapp.com/iot',
@@ -23,7 +23,7 @@ app.get('/', (req, res) => res.render('pages/index'))  ; // index.html
     });
   }) ;	
         
-}*/
+}
 
 /*function initializer(){
   $.ajax({
