@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+ 
+	<head>
+		<title> Display data </title>
+	</head>
+ 
+	<body>
+	
+		<p> Number: </p> <p id = "output"></p>
+ 
+		<script>
+   		
+   			var xhrObj = new XMLHttpRequest();
+   			xhrObj.open('GET', "http://hwthoncr16.herokuapp.com/dominus/last", true);
+			xhrObj.send();
+			
+			xhrObj.addEventListener("readystatechange", processRequest, false);			
+			xhrObj.onreadystatechange = processRequest;
+ 
+			function processRequest(e) {
+				if (xhrObj.readyState == 4 && xhrObj.status == 200) {
+					var response = JSON.parse(xhrObj.responseText);
+			        document.getElementById("output").innerHTML = response.datoprueba;
+				}
+			}
+		</script>
+		
+	</body>
+ 
+</html>
