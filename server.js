@@ -52,9 +52,9 @@ client.on('connect', () => { // When connected
   }) ;
 })
 
-app.get('*', (req, res) => {
+/*app.get('*', (req, res) => {
   res.redirect('../#home', 404);
-});
+});*/
 
 
 var XMLHttpRequest = require("xmlhttprequest").XMLHttpRequest ;
