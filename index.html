@@ -11,37 +11,14 @@
 		<script type="text/javascript" src="server.js"></script>
 		<link rel="stylesheet" href="main.css" type="text/css">
 
-		<script>
-			$(function(){
-				initializer() ;
-			}); 
-		</script>
-		<script>
-			$(function(){
-			  entry() ;
-			});
-		</script>	
-		<script>
-			$(function(){
-			  drawChart() ;
-			}); 
-		</script>
-		<script>
-			$(function(){
-			  update() ;
-			}); 
-		</script>							
-		<script>
-			$(function(){
-				processRequest() ;
-			}); 
-		</script>		
-		<script>
-			$(function(){
-			  notifyMe() ;
-			}); 
-		</script>	
+		<script src="server.js" type="text/javascript"></script> 
+		<script> get() ; </script>
 
+		<script src="server.js" type="text/javascript"></script> 
+		<script> post() ; </script>
+
+		<script src="server.js" type="text/javascript"></script> 
+		<script> notifyMe() ; </script>
 
 	</head>
 		
@@ -59,11 +36,14 @@
 			<p> Sensor inferior: </p> <p id = "pi"></p>
 			
 			
-		</div>
+		<!---</div>
+		<input id="get" type="hidden" name="get" />
+		</div> -->
 
-		<button>Get Score</button>
+		<!-- <button>Get Score</button> -->
 		<button onclick = "notifyMe()"> Notify me please! </button>
-		<button onclick = "entry()"> apis! </button>
+		<button onclick = "get()"> get! </button>
+		<button onclick = "post()"> post! </button>
 
 		<table class="columns" align="center">
 			<tr>
@@ -73,6 +53,10 @@
 			</tr>
 		</table>
 		
+
+
+
+
 	</body>
  
 </html>
