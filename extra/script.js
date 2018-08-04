@@ -16,7 +16,9 @@ $( document ).ready(function() {
   client.connect(options);
 }) ;
 
-google.load("visualization", "1", {packages:["corechart"]}) ;
+//google.load('visualization', '1', {packages:['gauge']}) ; //"1", 
+google.charts.load('visualization', {'packages':['gauge']});
+
  
 // Revisar si está ingrsesado 
 function onConnect() {
@@ -88,24 +90,21 @@ function init (){
 
 function drawChart(){
   var obj2 = JSON.parse(obj1) ;
-    
-var data = new google.visualization.DataTable();
-data.addColumn('string', 'Propiedad JSON');
-data.addColumn('number', 'Valor');
-data.addRows([
-    ["Nivel", parseInt(obj2.oliberum_device)] //obj2.oliberum_device] //,     ["Tiempo", 15]
-]
-);
 
-// Set chart options
-var options = {'title':'Estado del recipiente',
-               'width':400,
-               'height':300,
-               is3D:true};
+  var data = google.visualization.arrayToDataTable([
+    ['Label', 'Value'],
+    ['Tank level', parseInt(obj2.oliberum_device)]
+  ]);
 
-// Instantiate and draw our chart, passing in some options.
-var chart = new google.visualization.PieChart(document.getElementById("chart_div"));
-chart.draw(data, options);
+  var options = {
+    width: 500, height: 500,
+    redFrom: 90, redTo: 100,
+    yellowFrom:75, yellowTo: 90,
+    minorTicks: 5
+  };
+  var chart = new google.visualization.Gauge(document.getElementById('chart_div'));
+  chart.draw(data, options);
+
 }
 
 function update(){
@@ -166,3 +165,38 @@ function moveDK() {
   var audio = new Audio('assets/DK.mp3');
   audio.play();
 }
+
+
+
+  /*  var data = new google.visualization.DataTable();
+data.addColumn('string', 'Propiedad JSON');
+data.addColumn('number', 'Valor');
+data.addRows([
+    ["Nivel", parseInt(obj2.oliberum_device)]
+    //[, 100-parseInt(obj2.oliberum_device)] //     "f", parseInt(obj2.oliberum_device) obj2.oliberum_device] //,     
+]
+); */
+  //var chart = new google.visualization.PieChart(document.getElementById("chart_div"));
+   /* 
+var data = new google.visualization.DataTable();
+data.addColumn('string', 'Propiedad JSON');
+data.addColumn('number', 'Valor');
+data.addRows([
+    ["Nivel", parseInt(obj2.oliberum_device)]
+    //[, 100-parseInt(obj2.oliberum_device)] //     "f", parseInt(obj2.oliberum_device) obj2.oliberum_device] //,     
+]
+);
+
+// Set chart options
+var options = {'title':'Estado del recipiente',
+               'width':400,
+               'height':300,
+               'vAxis': {minValue: 0,
+                       maxValue: 100,
+                       format: '#%'},
+               is3D:true} ;
+
+// Instantiate and draw our chart, passing in some options.
+var chart = new google.visualization.PieChart(document.getElementById("chart_div"));
+chart.draw(data, options);
+*/

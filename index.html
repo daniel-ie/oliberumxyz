@@ -13,6 +13,9 @@
 		<script type="text/javascript" src="./extra/script.js"></script>
 		<link rel="stylesheet" href="main.css" type="text/css">
 
+		<link rel='stylesheet prefetch' href='https://fonts.googleapis.com/css?family=PT+Sans'>
+		<link rel="stylesheet" href="css/style.css">
+  
 		<style>
 			th, td {
 				border: 1px solid blue ; 				
@@ -22,14 +25,22 @@
 	</head>
 
 	<body>
-		<img src="/public/image.jpeg" alt="Logo"> 
 
-		<h2> Oil Orders </h2>
-		<h4> Add an Oil Order</h4>
-	
-    	<input id="input1" type="text" name="" style="color: black;">
-		<button id="button1" onclick="clickButton()">login</button>
-
+		<div>
+			
+			<h2> Oil Orders </h2>
+			<h4> Add an Oil Order</h4>		
+				<!--	<input id="input1" type="text" name="" style="color: black;">
+				<button id="button1" onclick="clickButton()">login</button>
+				-->
+			<div class="container">
+					<!--<div>
+							<img src="/public/Oliberum.png" alt="Logo">
+					</div>	-->			
+				<input id="input1" type="text" class="form__field" name="">
+				<button id="button1" onclick="clickButton()" class="btn btn--primary btn--inside uppercase">login</button>
+			</div>
+		</div>
 	</body>
 
 </html>
