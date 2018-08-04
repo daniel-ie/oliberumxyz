@@ -123,7 +123,7 @@ var b1=240 ;
 //Team Score
 var s1=0 ;
 
-function move1(direction) {
+function move1(direction) { 
   if(direction == '1'){
     if(m1>0){ 
       m1-=10;
