@@ -3,60 +3,33 @@
  
 	<head>
 	
-		<title> Display data </title>
+		<title>O L I B E R U M</title>
 
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+		<!--<script type="text/javascript" src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+		<script type="text/javascript" src="http://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script> -->
+		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 		<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
 		<script type="text/javascript" src="https://www.google.com/jsapi"></script>
-		<script type="text/javascript" src="server.js"></script>
+		<script type="text/javascript" src="./extra/script.js"></script>
 		<link rel="stylesheet" href="main.css" type="text/css">
 
-		<script src="server.js" type="text/javascript"></script> 
-		<script> get() ; </script>
-
-		<script src="server.js" type="text/javascript"></script> 
-		<script> post() ; </script>
-
-		<script src="server.js" type="text/javascript"></script> 
-		<script> notifyMe() ; </script>
+		<style>
+			th, td {
+				border: 1px solid blue ; 				
+			}
+		</style> 
 
 	</head>
-		
+
 	<body>
+		<img src="/public/image.jpeg" alt="Logo"> 
 
-		<div>
-			<h1 class="banner">O L I B E R U M</h1>
-			
-			<p> </p>
-			<p> </p>
-			<p> </p>
-			
-			<p> Sensor superior: </p> <p id = "fuerza"></p>
-			<p> Sensor superior: </p> <p id = "ps"></p>
-			<p> Sensor inferior: </p> <p id = "pi"></p>
-			
-			
-		<!---</div>
-		<input id="get" type="hidden" name="get" />
-		</div> -->
-
-		<!-- <button>Get Score</button> -->
-		<button onclick = "notifyMe()"> Notify me please! </button>
-		<button onclick = "get()"> get! </button>
-		<button onclick = "post()"> post! </button>
-
-		<table class="columns" align="center">
-			<tr>
-				<td><div id = "chart_div"></div></td>
-				<td><div id = "chart_div2"></div></td>
-				<td><div id = "chart_div3"></div></td>
-			</tr>
-		</table>
-		
-
-
-
+		<h2> Oil Orders </h2>
+		<h4> Add an Oil Order</h4>
+	
+    	<input id="input1" type="text" name="" style="color: black;">
+		<button id="button1" onclick="clickButton()">login</button>
 
 	</body>
- 
+
 </html>
