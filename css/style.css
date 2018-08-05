@@ -1,15 +1,30 @@
-:root {
-  background: #31B3DA url(../public/Oliberum.png) no-repeat center left;
+body{
+  background: #31B3DA url(../public/Oliberum.png);
+  background-size: 100%;
   color: #9c9c9c;
   font: 1rem "PT Sans", sans-serif;
 }
 
+.inputs{
+  margin-left: 33%;
+  margin-right: 40%;
+  margin-top: 26%;
+}
+
+.inputs label{
+  font-size: 22px;
+  color: #fff;
+}
+
+
+
+
 html,
 body,
-.container {
+/* .container {
   
   height: 100%;
-}
+} */
 
 a {
   color: inherit;
@@ -69,7 +84,7 @@ a:hover {
 }
 
 .form__field {
-  width: 150px;
+  width:400px;
   background: #6248b3ad ;
   color: #a3a3a3;
   font: inherit;
