@@ -36,8 +36,6 @@ function clickButton(e){
   window.location.replace('oil.html');
   //alert(valorInput);
 }
-
-
 // called when the client loses its connection
 function onConnectionLost(responseObject) {
   if (responseObject.errorCode !== 0) {
@@ -57,7 +55,8 @@ function onMessageArrived(message) {
 
   obj1 = message.payloadString ;
 
-  oliberum(obj1) ;//message.payloadString) ;  
+  oliberum(obj1) ;//message.payloadString) ;
+  recipienteListo(obj1) ;  
   //drawChart(message.payloadString) ;
 }
 
@@ -88,6 +87,7 @@ function init (){
   google.charts.setOnLoadCallback(drawChart) ;        
 }
 
+//-------------------------- Plot del gráfico --------------------------
 function drawChart(){
   var obj2 = JSON.parse(obj1) ;
 
@@ -97,7 +97,7 @@ function drawChart(){
   ]);
 
   var options = {
-    width: 500, height: 500,
+    width: 400, height: 400,
     redFrom: 90, redTo: 100,
     yellowFrom:75, yellowTo: 90,
     minorTicks: 5
@@ -106,6 +106,51 @@ function drawChart(){
   chart.draw(data, options);
 
 }
+
+function recipienteListo(data){
+  var obj = JSON.parse(data) ;
+
+  console.log("test >> "+data) ;
+  console.log("test parser >> "+obj.oliberum_device) ;
+  
+  notifyMe() ;
+}
+function info(){
+  var x = document.getElementById("myInfo");
+  if (x.style.display === "none") {
+      x.style.display = "block";
+  } else {
+      x.style.display = "none";
+  }
+
+  //var valorInput = $("#input1").val();
+  //window.location.replace('oil.html');
+}
+function notifyMe() {	  
+  // Let's check if the browser supports notifications
+  if (!("Notification" in window)) {
+    alert("This browser does not support desktop notification");
+  }
+  // Let's check whether notification permissions have already been granted
+  else if (Notification.permission === "granted") {
+  // If it's okay let's create a notification
+    var notification = new Notification("Nuevo recipiente lleno!");
+  }
+  // Otherwise, we need to ask the user for permission
+  else if (Notification.permission !== 'denied') {
+    // If the user accepts, let's create a notification
+    Notification.requestPermission(
+      function (permission){
+        if (permission === "granted") {
+          var notification = new Notification("Nuevo recipiente lleno!");
+        }
+      }
+    );
+  }
+
+}
+
+
 
 function update(){
   console.log("Testint objet1 = "+obj1) ;

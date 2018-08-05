@@ -46,16 +46,27 @@
 
 <body id="body">
 
-
 		<img src="/public/image.jpeg" alt="Logo"> 
 
-		<h2> Oil Orders </h2>
-		<h4> Add an Oil Order</h4>    
+        <h2> Oil Orders </h2>
+        <p></p>
+		<h4> Make an Oil Order</h4>    
         
 		<!--<button id="button2" onclick = "get()"> get! </button>
-		<button id="button3" onclick = "post()" > post! </button> -->
+        <button id="button3" onclick = "post()" > post! </button> -->
         
-		<div id="chart_div" style="width: 500px; height: 500px;"></div>
+        <div style="margin-right: 185px">
+            <div id="chart_div"></div>
+        </div>
+        <div style="margin-left:185px">                        
+            <button id="info" onclick="info()" type="text" name=""> Info </h4>    
+        </div>
+
+        <div id="myInfo" type="hidden">
+            Address:
+            Company:
+            Content:
+        </div>
 
         <!--
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
