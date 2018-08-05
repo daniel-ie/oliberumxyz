@@ -7,7 +7,7 @@
   },
   "main": "server.js",
   "scripts": {
-    "start": "node server.js"
+    "start": "nodemon server.js"
   },
   "author": "Daniel Chaves",
   "license": "MIT",
@@ -21,7 +21,7 @@
     "jade": "^1.11.0",
     "morgan": "^1.9.0",
     "mqtt": "^2.18.3",
-    "nodemon": "^1.9.1",
+    "nodemon": "^1.18.3",
     "stylus": "^0.54.5",
     "xmlhttprequest": "^1.8.0"
   },

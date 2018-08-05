@@ -5,7 +5,7 @@
 
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<!--    <title>MQTT</title>
+    <!--    <title>MQTT</title>
     <meta content="width=device-width, initial-scale=1" name="viewport">
     <meta content="Webflow" name="generator">
     <link href="./assets/protoxyz.webflow.32d60725f.css" rel="stylesheet" type="text/css">
@@ -14,7 +14,7 @@
     <script type="text/javascript">WebFont.load({ google: { families: ["Open Sans:300,300italic,400,400italic,600,600italic,700,700italic,800,800italic", "Oswald:200,300,400,500,600,700"] } });</script>
     <!--[if lt IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js" type="text/javascript"></script><![endif]-->
 
-<!--    
+    <!--    
     <script type="text/javascript">!function (o, c) { var n = c.documentElement, t = " w-mod-"; n.className += t + "js", ("ontouchstart" in o || o.DocumentTouch && c instanceof DocumentTouch) && (n.className += t + "touch") }(window, document);</script>
     <script type="text/javascript" src="./assets/mqtt.js"></script>
     <link href="./assets/favicon.png" rel="shortcut icon" type="image/x-icon">
@@ -27,8 +27,7 @@
     <script type="text/javascript" src="http://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script> -->
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-    <script type="text/javascript" src="extra/script.js"></script>
-      
+
     <script type="text/javascript" src="https://www.google.com/jsapi"></script>
     <link rel="stylesheet" href="main.css" type="text/css">
 
@@ -36,39 +35,62 @@
 
 
     <style>
-        th, td {
-            border: 1px solid blue ; 				
+        th,
+        td {
+            border: 1px solid blue;
         }
-    </style> 
+
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        #map {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            width: 50%;
+        }
+    </style>
+
+    <!-- MAPBOX -->
+    <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.47.0/mapbox-gl.js'></script>
+    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.47.0/mapbox-gl.css' rel='stylesheet' />
+
+    <script type="text/javascript" src="extra/script.js"></script>
+
 
 
 </head>
 
 <body id="body">
 
-		<img src="/public/image.jpeg" alt="Logo"> 
+    <img src="/public/image.jpeg" alt="Logo">
 
-        <h2> Oil Orders </h2>
-        <p></p>
-		<h4> Make an Oil Order</h4>    
-        
-		<!--<button id="button2" onclick = "get()"> get! </button>
+    <h2> Oil Orders </h2>
+    <p></p>
+    <h4> Make an Oil Order</h4>
+
+    <!--<button id="button2" onclick = "get()"> get! </button>
         <button id="button3" onclick = "post()" > post! </button> -->
-        
-        <div style="margin-right: 185px">
+    <div>
+        <div style="float: left;width: 50%;">
             <div id="chart_div"></div>
         </div>
-        <div style="margin-left:185px">                        
-            <button id="info" onclick="info()" type="text" name=""> Info </h4>    
+        <div style="float: right; width: 50%;">
+            <div id="map"></div>
         </div>
+    </div>
 
-        <div id="myInfo" type="hidden">
-            Address:
-            Company:
-            Content:
-        </div>
+    <div style="margin-left:185px">
+        <button id="info" onclick="info()" type="text" name=""> Info </h4>
+    </div>
 
-        <!--
+    <div id="myInfo" type="hidden">
+        Address: Company: Content:
+    </div>
+
+    <!--
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
         <input type="hidden" name="smname" />
         <div class="tk" data-amount="1000">
@@ -88,7 +110,7 @@
         </div>
     -->
 
-<!--
+    <!--
     <div class="section">
         <div class="taclado">
             <div class="teclado-linea">
@@ -116,7 +138,6 @@
     integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
     crossorigin="anonymous"></script>
      <script src="./assets/script.js" type="text/javascript" ></script> -->
-
 
 </body>
 
