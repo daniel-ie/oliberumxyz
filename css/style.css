@@ -1,9 +1,11 @@
 body{
-  background: #31B3DA url(../public/Oliberum.png);
+  background: #31B3DA url(../public/img1.jpg);
   background-size: 100%;
   color: #9c9c9c;
   font: 1rem "PT Sans", sans-serif;
 }
+
+
 
 .inputs{
   margin-left: 33%;
@@ -13,7 +15,7 @@ body{
 
 .inputs label{
   font-size: 22px;
-  color: #fff;
+  color: #5a8300;
 }
 
 
@@ -62,7 +64,7 @@ a:hover {
   cursor: pointer;  
 }
 .btn--primary {
-  background: #7f8ff4;
+  background: #5a8300;
   color: #fff;
   box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.1);
   border-radius: 2px;
@@ -85,8 +87,18 @@ a:hover {
 
 .form__field {
   width:400px;
-  background: #6248b3ad ;
-  color: #a3a3a3;
+  margin-top: -2% ;
+  background: #60830045 ;
+  font: inherit;
+  box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.1);
+  border: 0;
+  outline: 0;
+  padding: 12px 12px
+}
+.form__field1 {
+  width:400px;
+  margin-top: 8% ;
+  background: #60830045 ;
   font: inherit;
   box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.1);
   border: 0;
@@ -110,7 +122,7 @@ input {
 
 
 .button {
-  background-color: #4CAF50; /* Green */
+  background-color: #5a8300; /* Green */
   border: none;
   color: white;
   padding: 15px 32px;
@@ -120,4 +132,57 @@ input {
   font-size: 16px;
 
   margin-left:185px;
+}
+
+
+
+
+/* Spinner */
+.spinner {
+  margin: 100px auto;
+  width: 40px;
+  height: 40px;
+  position: relative;
+  text-align: center;
+  
+  -webkit-animation: sk-rotate 2.0s infinite linear;
+  animation: sk-rotate 2.0s infinite linear;
+}
+
+.dot1, .dot2 {
+  width: 60%;
+  height: 60%;
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  background-color: #333;
+  border-radius: 100%;
+  
+  -webkit-animation: sk-bounce 2.0s infinite ease-in-out;
+  animation: sk-bounce 2.0s infinite ease-in-out;
+}
+
+.dot2 {
+  top: auto;
+  bottom: 0;
+  -webkit-animation-delay: -1.0s;
+  animation-delay: -1.0s;
+}
+
+@-webkit-keyframes sk-rotate { 100% { -webkit-transform: rotate(360deg) }}
+@keyframes sk-rotate { 100% { transform: rotate(360deg); -webkit-transform: rotate(360deg) }}
+
+@-webkit-keyframes sk-bounce {
+  0%, 100% { -webkit-transform: scale(0.0) }
+  50% { -webkit-transform: scale(1.0) }
+}
+
+@keyframes sk-bounce {
+  0%, 100% { 
+    transform: scale(0.0);
+    -webkit-transform: scale(0.0);
+  } 50% { 
+    transform: scale(1.0);
+    -webkit-transform: scale(1.0);
+  }
 }

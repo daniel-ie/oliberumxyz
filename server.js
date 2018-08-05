@@ -77,11 +77,11 @@ client.on('connect', () => { // When connected
     }
   });
   // publish a message to a topic
-  var msg = JSON.stringify({'mensaje':'Oliberum Rocks!'}) ;
-  client.publish('hwthon/oliberum', msg, () => {
-    console.log("Message is published");
-      //client.end(); // Close the connection when published
-  }) ;
+  // var msg = JSON.stringify({'mensaje':'Oliberum Rocks!'}) ;
+  // client.publish('hwthon/oliberum', msg, () => {
+  //   console.log("Message is published");
+  //     //client.end(); // Close the connection when published
+  // }) ;
 })
 
 

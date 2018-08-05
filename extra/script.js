@@ -24,8 +24,8 @@ var gjPoint = {
       ]
     },
     "properties": {
-      "title": "Tanque #1",
-      "icon": "circle"
+      //"title": "Tanque #1",
+      "icon": "content-1"
     }
   }]
 }
@@ -85,11 +85,28 @@ function oliberum(data) {
 
   console.log("*** Var state = "+data) ; // obj.oliberum_device
 
-  var range = parseInt(obj.oliberum_device) ;
+  var rangeInit = parseInt(obj.oliberum_device) ;
+
+  var range = rangeInit*(100/17)
+  
+  console.log("range = " + range) ;
+  
   /* Handler Map */
-  if (range >= 5) {
-    gjPoint.features[0].properties.icon = 'monument';
-    gjPoint.features[0].properties.title = 'Full';
+  if (range < 50) {
+    gjPoint.features[0].properties.icon = 'content-1';
+    // gjPoint.features[0].properties.title = 'Oliberum';
+    map.getSource("scPoint").setData(gjPoint);
+  }
+
+  if (range >= 50 && range < 90) {
+    gjPoint.features[0].properties.icon = 'content-2';
+  // gjPoint.features[0].properties.title = 'Oliberum';
+    map.getSource("scPoint").setData(gjPoint);
+  }
+
+  if (range >= 90) {
+    gjPoint.features[0].properties.icon = 'content-3';
+    // gjPoint.features[0].properties.title = 'Oliberum';
     map.getSource("scPoint").setData(gjPoint);
 
     var popup = new mapboxgl.Popup({ closeOnClick: false }) 
@@ -123,13 +140,15 @@ function init() {
 function drawChart() {
   var obj2 = JSON.parse(obj1);
 
+  var x = obj2.oliberum_device*(100/17) ;
+
   var data = google.visualization.arrayToDataTable([
     ['Label', 'Value'],
-    ['Tank level', parseInt(obj2.oliberum_device)]
+    ['Tank level', parseInt(x)]
   ]);
 
   var options = {
-    width: 400, height: 400,
+    width: 250, height: 250,
     redFrom: 90, redTo: 100,
     yellowFrom: 75, yellowTo: 90,
     minorTicks: 5
@@ -141,10 +160,10 @@ function drawChart() {
 
 function info() {
   var x = document.getElementById("myInfo");
-  if (x.style.display === "none") {
-    x.style.display = "block";
+  if (x.style.display === "block"){
+    x.style.display = "none" ;
   } else {
-    x.style.display = "none";
+    x.style.display = "block" ;
   }
   //var valorInput = $("#input1").val();
   //window.location.replace('oil.html');
@@ -154,7 +173,7 @@ function initMap() {
   mapboxgl.accessToken = 'pk.eyJ1Ijoib3NhbWFwIiwiYSI6ImNqZTh4MG82MTA0NTQyd3FlOXE4ZmsweGQifQ.xT6nJZDWamOeIxKXklrNYQ';
   map = new mapboxgl.Map({
     container: 'map', // container id
-    style: 'mapbox://styles/mapbox/streets-v9', // stylesheet location
+    style: 'mapbox://styles/osamap/cjkh87v0887pk2ropp07fdvuq', // mapbox://styles/mapbox/streets-v9 // stylesheet location
     center: [
       -84.14305865764695, //18
       9.936894882835697 //47
@@ -217,7 +236,7 @@ function initMap() {
       "type": "symbol",
       "source": 'scPoint',
       "layout": {
-        "icon-image": "{icon}-15",
+        "icon-image": "{icon}",
         "text-field": "{title}",
         "text-font": ["Open Sans Semibold", "Arial Unicode MS Bold"],
         "text-offset": [0, 0.6],

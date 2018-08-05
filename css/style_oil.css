@@ -1,0 +1,135 @@
+body{
+  background: #31B3DA url(../public/img2.jpg);
+  background-size: 100%;
+  color: #9c9c9c;
+  font: 1rem "PT Sans", sans-serif;
+}
+
+
+
+.inputs{
+  margin-left: 33%;
+  margin-right: 40%;
+  margin-top: 26%;
+}
+
+.inputs label{
+  font-size: 22px;
+  color: #5a8300;
+}
+
+
+
+
+html,
+body,
+/* .container {
+  
+  height: 100%;
+} */
+
+a {
+  color: inherit;
+}
+a:hover {
+  color: #7f8ff4;
+}
+
+.container {
+  
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+.btn {
+  color: inherit;
+  font: inherit;
+  border: 0;
+  outline: 0;
+  padding: 0;
+  -webkit-transition: all 200ms ease-in;
+  transition: all 200ms ease-in;
+  cursor: pointer;  
+}
+.btn--primary {
+  background: #5a8300;
+  color: #fff;
+  box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.1);
+  border-radius: 2px;
+  padding: 12px 36px;
+}
+.btn--primary:hover {
+  background: #6c7ff2;
+}
+.btn--primary:active {
+  background: #7f8ff4;
+  box-shadow: inset 0 0 10px 2px rgba(0, 0, 0, 0.2);
+}
+.btn--inside {
+  margin-top: 0px ;
+  /*margin-bottom: 850px ; 
+  margin-right: 500px ;
+  margin-left: 450px ;*/
+
+}
+
+.form__field {
+  width:400px;
+  margin-top: -2% ;
+  background: #60830045 ;
+  font: inherit;
+  box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.1);
+  border: 0;
+  outline: 0;
+  padding: 12px 12px
+}
+.form__field1 {
+  width:400px;
+  margin-top: 8% ;
+  background: #60830045 ;
+  font: inherit;
+  box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.1);
+  border: 0;
+  outline: 0;
+  padding: 12px 12px
+}
+
+legend {
+  background-color: #000;
+  color: #fff;
+  padding: 3px 6px;
+}
+
+.output {
+  font: 1rem 'Fira Sans', sans-serif;
+}
+
+input {
+  margin: .4rem;
+}
+
+
+.button {
+  background-color: #5a8300; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+
+  margin-left:185px;
+}
